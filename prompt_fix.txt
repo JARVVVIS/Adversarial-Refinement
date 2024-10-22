@@ -1,0 +1,71 @@
+**Context:**
+
+You recently created a cinema analysis quiz that included the following question, based on a specific movie scene. However, it was observed that many participants were able to answer the question correctly without even looking at the scene itself, simply by analyzing the question and answer choices alone. This is a major issue, as the quiz should challenge participants to draw on deeper film analysis, not just surface-level logic or pattern recognition.
+
+To address this, we need you to either:
+
+1. **Enhance the existing question:** Modify the question to make it more challenging by adjusting the phrasing or rethinking the distractor choices. You can apply techniques like adding negations, using more subtle or contextually nuanced distractors, or introducing new distractors that could plausibly be correct but require deep analysis to eliminate.
+
+2. **Generate a completely new question:** If it’s not feasible to salvage the original question, create an entirely new question that better reflects the analysis required for the scene, ensuring it’s impossible to answer purely by reading the question and options.
+
+---
+
+**Key Guidelines:**
+
+- **Distractor Quality:** Ensure that incorrect answer choices are highly plausible and difficult to distinguish from the correct answer without careful analysis of the scene. Use techniques like:
+    - Incorporating subtle but important differences between options.
+    - Adding negations or inversions to make distractors trickier.
+    - Introducing contextually relevant but incorrect elements.
+  
+- **Subtle Question Rephrasing:** Avoid making the question too straightforward. Use rephrasing strategies that preserve the analytical depth but reduce the ease of guessing.
+
+- **Question Balance:** Ensure that the correct answer isn’t made too obvious by its length, structure, or wording compared to the distractors.
+
+- **Diverse Question Types:** You can either rework the existing question to achieve this, or develop a brand-new question that better meets these guidelines.
+
+**Input Information:**
+- Movie scene details will be provided in a structured format comprising two distinct categories, and the relevant scene description. The two categories are as follows:
+  - **<subtitle>** for character dialogues (to be used only for identifying character presence, not actions or dialogue content).
+  - **<visual descriptions>** for noting characters' presence, attributes, thematic elements, etc., within the scene.
+
+**Movie Scene:**
+```
+{MOVIE_SCENE_TS}
+```
+
+**Orignal Question with answer choices:**
+```
+{ORIGINAL_QA}
+```
+
+**Original Answer Key:**
+```
+{ORIGINAL_ANS}
+```
+
+**Student's Rationale for Picking the Answer Key by Only Seeing the Question and Answer Choices:**
+```
+{STUDENT_RATIONALE}
+```
+
+
+---
+
+**Output Format:**
+
+Your output should only contain the revised or new question with its answer choices, formatted as follows:
+
+```
+Question: <Possibly Modified Question>
+- A) <Possibly Modified Answer Choice 1>
+- B) <Possibly Modified Answer Choice 2>
+- C) <Possibly Modified Answer Choice 3>
+- D) <Possibly Modified Answer Choice 4>
+- E) <Possibly Modified Answer Choice 5>
+
+**Correct Answer:** [Specify the answer key option letter -- A, B, C, D, or E]
+```
+
+---
+
+**Important:** Do **not** include any additional rationale, commentary, or explanation beyond what’s needed to produce the question and answers. The focus is solely on the question, options, and answer key.
